@@ -44,6 +44,8 @@ function printNum_2 (arg) {
                 if(arg[i] === arg[j] && j != k) {
                     extraVal.push(arg.splice(j, 1));
                     j--;
+                    let console_output = "One or more repeated result - " + arg[i];
+                    console.error(console_output);
                 }
                 var output = "The number is " + arg[i] ;
                 output_heap.push(output); 
@@ -58,9 +60,6 @@ function printNum_2 (arg) {
                         }
                         
                     }
-               
-                let console_output = "One or more repeated result - " + arg[i];
-                console.error(console_output);
         }
 
     }
@@ -82,3 +81,17 @@ for (let i = 0; i < 10; i++) {
 
 
 printNum_2(numberList);
+
+const goToTop = () => window.scrollTo(0, 0);
+
+const colorH1 = () => {
+    randomColor = () => {
+        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+        return randomColor;
+    };
+    document.getElementById('paragraph').style.color = randomColor();
+
+};
+
+
+
